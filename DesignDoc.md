@@ -16,7 +16,7 @@ The basis of this model will focus on three central steps. This is training a mo
 2. Create a flexible pipeline that works for any GWAS summary statistics.
 3. Automatically generate a Manhattan plot for the scPrediXcan cell types. 
 4. Adjust code so newest versions of numpy and pandas can be used.
-
+![](https://www.biorxiv.org/content/biorxiv/early/2024/11/14/2024.11.11.623049/F1.large.jpg)
 # Non-Goals
 1. Label expression value problem, where cells have an expression value of 0 and are not ranked in the same order each run. In a one cell type/one model, there will not be ranking disparities.
 
