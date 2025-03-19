@@ -21,6 +21,8 @@ The basis of this model will focus on three central steps. This is training a mo
 1. Label expression value problem, where cells have an expression value of 0 and are not ranked in the same order each run. In a one cell type/one model, there will not be ranking disparities.
 
 # Proposed Solution
+### Workflow
+![2st](https://github.com/user-attachments/assets/0e5e3293-0b18-4ed2-bed0-c1ec25525b19)
 1. Setting up the environment → Downloading models from scPrediXcan GitHub repository, GWAS summary statistics, sample data that is required for the initial runs, installing any dependencies and importing all libraries
 2. Preparing the Data → Checking the dataset structure and converting or unzipping the files, including argparse for the code to run on different types of data
 3. Running the pipeline → Running S-PrediXcan and scPrediXcan to find the associations between genes and traits
