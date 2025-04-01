@@ -85,6 +85,8 @@ for known_column in known_columns:
 # Print or execute the command
 print(f"Generated command:\n{command}")
 run_bash(command)
+gwas_path = os.path.dirname(infile) #get path from infile
+"--gwas_folder {gwas_path} \\n" #use path
 
 # main command that calls SPrediXcan.py and gives path info for models and data - taken from github
 main_c = (
