@@ -57,8 +57,10 @@ merged_df.to_csv('mergeddata.csv', index = False)
 # Set the color palette
 colors = sns.color_palette("husl", n_colors=len(merged_df['chromosome'].unique()))
 
-# Create the plot
+#define figure size
+sns.set(rc={"figure.figsize":(10, 5)}) #width=8, height=4
 
+# Create the plot
 g = sns.scatterplot(
     x=merged_df['cumulative_pos'], 
     y=-(merged_df['-logp']), 
@@ -75,13 +77,12 @@ g.set_title('Manhattan Plot of TWAS Results')
 
 # Compute median positions for chromosome labels
 xticks = merged_df.groupby('chromosome')['cumulative_pos'].median()
-print(xticks)
+#print(xticks)
 # Add chromosome labels
 g.set_xticks(xticks)
-g.set_xticklabels(xticks.index) 
-
+g.set_xticklabels(xticks.index.astype(int)) 
 # Add a significance threshold line
-#plt.axhline(y=-np.log10(5e-8), color='red', linestyle='--')
+g.axhline(y=-np.log10(5e-8), color='red', linestyle='--')
 #save as png
 fig = g.get_figure()
 fig.savefig("manhattan_plot.png", dpi=300)
