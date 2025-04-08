@@ -41,13 +41,16 @@ merged_df = merged_df.sort_values(['chromosome', 'position'])
 # dropping na
 merged_df.dropna(subset= ['chromosome'], inplace = True)
 # Compute cumulative position for Manhattan plot
+merged_df['cumulative_pos'] = 0 
 running_pos = 0
-cumulative_pos =[]
-for chrom, group_df in merged_df.groupby('chromosome'):
-    cumulative_pos.append(merged_df['position'] + (running_pos))
-    running_pos += merged_df['position'].max()
-print(len(cumulative_pos))
-merged_df['cumulative_pos'] = (cumulative_pos)
+cumulative_pos ={}
+
+for chrom in sorted(merged_df['chromosome'].unique()):
+    chrom_subset = merged_df[merged_df['chromosome'] == chrom]
+    cumulative_pos[chrom] = running_pos
+    merged_df.loc[merged_df['chromosome'] == chrom, 'cumulative_pos'] = chrom_subset['position'] + running_pos
+    running_pos += chrom_subset['position'].max() 
+
 merged_df['SNP_number'] = merged_df.index
 #for bug fixing
 merged_df.to_csv('mergeddata.csv', index = False)
@@ -57,7 +60,7 @@ colors = sns.color_palette("husl", n_colors=len(merged_df['chromosome'].unique()
 # Create the plot
 
 g = sns.scatterplot(
-    x=running_pos, 
+    x=merged_df['cumulative_pos'], 
     y=-(merged_df['-logp']), 
     hue='chromosome', 
     palette='Set1', 
@@ -66,17 +69,20 @@ g = sns.scatterplot(
 )
 
 # Add labels and title
-g.ax.set_xlabel('Chromosome')
-g.ax.set_ylabel('-log10(p-value)')
-plt.title('Manhattan Plot of TWAS Results')
+g.set_xlabel('chromosome')
+g.set_ylabel('-log10(p-value)')
+g.set_title('Manhattan Plot of TWAS Results')
 
+# Compute median positions for chromosome labels
+xticks = merged_df.groupby('chromosome')['cumulative_pos'].median()
+print(xticks)
 # Add chromosome labels
-g.ax.set_xticks(merged_df.groupby('chromosome')('cumulative_pos').median())
-g.ax.set_xticklabels(merged_df['chromosome']).unique()
-
+g.set_xticks(xticks)
+g.set_xticklabels(xticks.index) 
 
 # Add a significance threshold line
 #plt.axhline(y=-np.log10(5e-8), color='red', linestyle='--')
 #save as png
-g.savefig("manhattan_plot.png", dpi=300)
+fig = g.get_figure()
+fig.savefig("manhattan_plot.png", dpi=300)
 # Show the plot
