@@ -39,4 +39,6 @@ run this test code:
 4. Running the Python Wrapper
 -
 5. Acknowledgments
+https://python-graph-gallery.com/manhattan-plot-with-matplotlib/
+https://stackoverflow.com/questions/37463184/how-to-create-a-manhattan-plot-with-matplotlib-in-python
 
