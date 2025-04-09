@@ -88,12 +88,14 @@ run_bash(command)
 gwas_path = os.path.dirname(infile) #get path from infile
 "--gwas_folder {gwas_path} \\n" #use path
 
+os.chdir('MetaXcan/software') #moves directory so the main command cand find it's stuff
+
 # main command that calls SPrediXcan.py and gives path info for models and data - taken from github
 main_c = (
-    "./SPrediXcan.py \\\n"
+    "python /home/project4/scPrediXcan_Group_Project/MetaXcan/software/SPrediXcan.py \\\n"
     "--model_db_path data/DGN-WB_0.5.db \\\n"
     "--covariance data/covariance.DGN-WB_0.5.txt.gz \\\n"
-    "--gwas_folder data/GWAS \\\n"
+    "--gwas_folder data/GWAS \\\n"   #removed MetaXcan/software/ b/c of addition of os.chdir above
     "--gwas_file_pattern \".*gz\" \\\n"
 )
 
@@ -105,7 +107,7 @@ for known_column in known_columns:
         info_c += f"--{known_column} {matching_header[0]} \\\n"
 
 # final output location
-output_c = "--output_file {outfile}"
+output_c = f"--output_file {outfile}"
 
 # Combine all parts into the full command
 command = main_c + info_c + output_c
@@ -113,3 +115,5 @@ command = main_c + info_c + output_c
 # Print or execute the full command
 print(f"Generated full command:\n{command}")
 run_bash(command)
+
+#updated 4/2/2025 4:03pm By Jude
