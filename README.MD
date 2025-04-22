@@ -39,6 +39,7 @@ You can run this code to test the install:
 4. Running the Python Wrapper
 -
 5. Acknowledgments
+https://github.com/hakyimlab/scPrediXcan?tab=readme-ov-file
 https://python-graph-gallery.com/manhattan-plot-with-matplotlib/
 https://stackoverflow.com/questions/37463184/how-to-create-a-manhattan-plot-with-matplotlib-in-python
 
