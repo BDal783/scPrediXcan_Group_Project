@@ -1,4 +1,4 @@
-name: imlabtools
+name: imlabtools2
 channels:
   - defaults
   - conda-forge
@@ -15,4 +15,5 @@ dependencies:
   - statsmodels=0.11.1
   - h5py=2.10.0
   - pyarrow=0.11.0
+  - seaborn=0.12.2
 
