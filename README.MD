@@ -1,12 +1,12 @@
 # Comp 383 scPrediXcan Group Project
 
 ## Quick Background
--The purpose of this repo was to take the scPrediXcan code created by hakyimlab, be able to run it and improve upon it. We are doing this by improving the way that it reads in GWAS files. This by using such tools like difflib and it being able to read in multiple GWAS files. We also improved upon the file by adding to the TWAS Results the gene's chromosome and SNP, this so that it automatically creates a Manhatten plot of the TWAS results.
+The purpose of this repo was to take the scPrediXcan code created by hakyimlab, be able to run it and improve upon it. We are doing this by improving the way that it reads in GWAS files. This by using such tools like difflib and it being able to read in multiple GWAS files. We also improved upon the file by adding to the TWAS Results the gene's chromosome and SNP, this so that it automatically creates a Manhatten plot of the TWAS results.
 ## Installation
 >[!WARNING]
->This project uses git and miniconda which must be installed and set up first
->Miniconda here: https://www.anaconda.com/download/success
->Git here: https://git-scm.com/downloads
+>This project uses git and miniconda which must be installed and set up first<br />
+>Miniconda here: https://www.anaconda.com/download/success<br />
+>Git here: https://git-scm.com/downloads<br />
 
 To begin installation one need to first creat a copy of this repo by using git clone.
 
