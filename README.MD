@@ -5,6 +5,7 @@ The purpose of this repo was to take the scPrediXcan code created by hakyimlab, 
 ## Installation
 >[!CAUTION]
 >This project uses packages only available for Linux and MacOS; attempting to create the necessary environment on Windows will fail.<br />
+
 >[!WARNING]
 >This project uses git and miniconda, which must be installed and set up first<br />
 >Miniconda here: https://www.anaconda.com/download/success<br />
