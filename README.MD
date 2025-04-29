@@ -19,10 +19,10 @@ git clone https://github.com/BDal783/scPrediXcan_Group_Project.git
 
 After finishing the clone download, ensure conda is activated and you're cd'd into the project folder.
 
-'''bash
+```bash
 conda activate
 cd ./scPrediXcan_Group_Project
-'''
+```
 
 Now, the conda environment needed to run scPrediXcan must be activated.
 
