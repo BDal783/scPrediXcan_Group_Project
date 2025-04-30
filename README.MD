@@ -44,15 +44,17 @@ It will create a TWAS_result.csv in MetaXcan/software, if it runs into issues ta
 Creating the conda environment will download all necessary dependencies
 
 ## Running the Python Wrapper<br />
-List your cell data files in the file list of Pipe.py starting at line 121 (MAKE SURE THIS REMAINS 121 IN FINAL VERSION)<br />
+List your cell data files in the file list of Pipe.py starting at line 121, make sure to remove any cell data files that aren't in use (MAKE SURE THIS REMAINS 121 IN FINAL VERSION)<br />
 Run Pipe.py with a single GWAS sumstats file<br />
 
 ```bash
-python Pipe3.py -i /path/to/gwas_sumstats_file/gwas.txt.gz -o altered_gwas_name.txt
+python Pipe3.py -i /path/to/gwas_sumstats_file/gwas.txt.gz -o altered_gwas_file.txt
 ```
+Pipe.py reformats the gwas_sumstats into -o altered_gwas_file.txt for processing<br />
+You can find the cell type outputs at Metascan/software named [cell_type].csv<br />
+The pipeline pulls these outputs and creates a Manhattan plot named [naming convention].png(?) located in the main project folder<br />
 
 
--
 ## Acknowledgments
 https://github.com/hakyimlab/scPrediXcan?tab=readme-ov-file<br />
 https://python-graph-gallery.com/manhattan-plot-with-matplotlib/<br />
