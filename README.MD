@@ -44,7 +44,8 @@ It will create a TWAS_result.csv in MetaXcan/software, if it runs into issues ta
 Creating the conda environment will download all necessary dependencies
 
 ## Running the Python Wrapper<br />
-List your cell data files in the file list of Pipe.py starting at line 121, make sure to remove any cell data files that aren't in use (MAKE SURE THIS REMAINS 121 IN FINAL VERSION)<br />
+Move all cell model data files to the CellData folder.
+List your cell model data files in the variable file_list of Pipe.py starting at line 121, make sure to remove any cell data files that aren't in use (MAKE SURE THIS REMAINS 121 IN FINAL VERSION)<br />
 Run Pipe.py with a single GWAS sumstats file<br />
 
 ```bash
