@@ -1,7 +1,7 @@
 # Comp 383 scPrediXcan Group Project
 
 ## Quick Background
-The purpose of this repo is to take the scPrediXcan code created by hakyimlab and increase its user accessibility by automating the process of GWAS header mapping and Manhattan plot visualization of TWAS results. We are creating a pipeline file that reads in GWAS files and reformats headers for processing, as there is no standard GWAS header format.
+The purpose of this repo is to take the scPrediXcan code created by hakyimlab and increase its user accessibility by automating the process of GWAS header mapping and Manhattan plot visualization of TWAS results. We are creating a pipeline file that reads in a GWAS sumstats file and reformats headers for processing, as there is no standard GWAS header format.
 ## Installation
 >[!CAUTION]
 >This project uses packages only available for Linux and MacOS; attempting to create the necessary environment on Windows will fail.<br />
