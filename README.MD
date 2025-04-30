@@ -40,10 +40,10 @@ You can run this code to test the scPrediXcan install:
 It will create a TWAS_result.csv in MetaXcan/software, if it runs into issues take debugging to the first acknowledgement link (scPrediXcan Github)
 
 
-3. Dependencies
+## Dependencies<br />
 Creating the conda environment will download all necessary dependencies
 
-4. Running the Python Wrapper
+## Running the Python Wrapper<br />
 List your cell data files in the file list of Pipe.py starting at line 121 (MAKE SURE THIS REMAINS 121 IN FINAL VERSION)<br />
 Run Pipe.py with a single GWAS sumstats file<br />
 
@@ -53,7 +53,7 @@ python Pipe3.py -i /path/to/gwas_sumstats_file/gwas.txt.gz -o altered_gwas_name.
 
 
 -
-5. Acknowledgments
+## Acknowledgments
 https://github.com/hakyimlab/scPrediXcan?tab=readme-ov-file<br />
 https://python-graph-gallery.com/manhattan-plot-with-matplotlib/<br />
 https://stackoverflow.com/questions/37463184/how-to-create-a-manhattan-plot-with-matplotlib-in-python<br />
