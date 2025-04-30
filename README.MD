@@ -1,7 +1,7 @@
 # Comp 383 scPrediXcan Group Project
 
 ## Quick Background
-The purpose of this repo was to take the scPrediXcan code created by hakyimlab, be able to run it and improve upon it. We are doing this by improving the way that it reads in GWAS files. This by using such tools like difflib and it being able to read in multiple GWAS files. We also improved upon the file by adding to the TWAS Results the gene's chromosome and SNP, this so that it automatically creates a Manhatten plot of the TWAS results.
+The purpose of this repo is to take the scPrediXcan code created by hakyimlab and increase its user accessibility by automating the process of GWAS header mapping and Manhattan plot visualization of TWAS results. We are creating a pipeline file that reads in GWAS files and reformats headers for processing, as there is no standard GWAS header format.
 ## Installation
 >[!CAUTION]
 >This project uses packages only available for Linux and MacOS; attempting to create the necessary environment on Windows will fail.<br />
