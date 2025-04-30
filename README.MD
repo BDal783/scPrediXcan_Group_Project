@@ -51,7 +51,7 @@ Run Pipe.py with a single GWAS sumstats file<br />
 ```bash
 python Pipe3.py -i /path/to/gwas_sumstats_file/gwas.txt.gz -o altered_gwas_file.txt
 ```
-Pipe.py reformats the gwas_sumstats into -o altered_gwas_file.txt for processing, the altered file is located in GWAS_alt folder, named by the output file. DO NOT PUT ".gz" IN THE OUTPUT.<br />
+Pipe.py reformats the gwas_sumstats into -o altered_gwas_file.txt for processing, the altered file is located in GWAS_alt folder, named by the output file. DO NOT PUT ".gz" IN THE OUTPUT NAME.<br />
 You can find the cell type outputs at Metascan/software named [cell_type].csv<br />
 The pipeline pulls these outputs and creates Manhattan plots 10 cell types at a time in .pngs located in the ManhattanPlots folder<br />
 
