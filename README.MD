@@ -32,20 +32,29 @@ conda env create -f conda_env.yaml
 conda activate imlabtools2
 ```
 
-You can run this code to test the install: 
+You can run this code to test the scPrediXcan install: 
 
 ```bash
 ./SPrediXcan.py --model_db_path 'data/DGN-WB_0.5.db' --covariance 'data/covariance.DGN-WB_0.5.txt.gz' --gwas_folder data/GWAS --gwas_file_pattern ".*gz" --snp_column SNP --effect_allele_column A1 --non_effect_allele_column A2 --beta_column BETA --pvalue_column P --output_file 'TWAS_result.csv'
 ```
-It will create a TWAS_result.csv in MetaXcan/software
+It will create a TWAS_result.csv in MetaXcan/software, if it runs into issues take debugging to the first acknowledgement link (scPrediXcan Github)
+
 
 3. Dependencies
--
+Creating the conda environment will download all necessary dependencies
+
 4. Running the Python Wrapper
+List your cell data files in the file list of Pipe.py starting at line 121 (MAKE SURE THIS REMAINS 121 IN FINAL VERSION)<br />
+Run Pipe.py with a single GWAS sumstats file<br />
+
+```bash
+python Pipe3.py -i /path/to/gwas_sumstats_file/gwas.txt.gz -o altered_gwas_name.txt
+```
+
 
 -
 5. Acknowledgments
-https://github.com/hakyimlab/scPrediXcan?tab=readme-ov-file
-https://python-graph-gallery.com/manhattan-plot-with-matplotlib/
-https://stackoverflow.com/questions/37463184/how-to-create-a-manhattan-plot-with-matplotlib-in-python
+https://github.com/hakyimlab/scPrediXcan?tab=readme-ov-file<br />
+https://python-graph-gallery.com/manhattan-plot-with-matplotlib/<br />
+https://stackoverflow.com/questions/37463184/how-to-create-a-manhattan-plot-with-matplotlib-in-python<br />
 
