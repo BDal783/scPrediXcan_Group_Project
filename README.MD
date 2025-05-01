@@ -49,7 +49,7 @@ List your cell model data files in the variable file_list of Pipe.py starting at
 Run Pipe.py with a single GWAS sumstats file<br />
 
 ```bash
-python Pipe3.py -i /path/to/gwas_sumstats_file/your_gwas.txt.gz -o altered_gwas_file.txt
+python Pipe.py -i /path/to/gwas_sumstats_file/your_gwas.txt.gz -o altered_gwas_file.txt
 ```
 Pipe.py reformats the gwas_sumstats into -o altered_gwas_file.txt for processing, the altered file is located in GWAS_alt folder, named by the output file. DO NOT PUT ".gz" IN THE OUTPUT NAME.<br />
 You can find the cell type outputs at Metascan/software named [cell_type].csv<br />
