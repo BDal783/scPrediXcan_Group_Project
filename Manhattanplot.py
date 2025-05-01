@@ -54,7 +54,7 @@ for file in input_files:
 combined_results = pd.concat(all_results, ignore_index=True)
 
 #loads the gene data
-gencode_df = load_gencode("gencode.v47.basic.annotation.gtf.gz")  # Update with actual file name
+gencode_df = load_gencode("gencode_bga.gtf.gz")  # Update with actual file name
 
 #merges the combined results with gene data
 merged_df = combined_results.merge(gencode_df, on="gene_name", how="left")
