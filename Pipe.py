@@ -288,7 +288,7 @@ if not os.path.exists(manhat_folder): #make folder if it doesnt exist
 
 for i in range(0, len(cell_type_tracker), per_graph):
     plot = cell_type_tracker[i:i+per_graph] #10 cell types to plot 
-    inputs = " ".join([os.path.abspath(f"./MetXcan/software/{cell}_output.csv") for cell in plot]) # get csv files using output naming convention
+    inputs = " ".join([os.path.abspath(f"./MetaXcan/software/{cell}_output.csv") for cell in plot]) # get csv files using output naming convention
     outputs = os.path.join(manhat_folder, f"{manhat_name}_{i//per_graph +1}.png") #names output using the input GWAS for organization
     man_command = f"python Manhattanplot.py -i {inputs} -o {outputs}"
     run_bash(man_command)
